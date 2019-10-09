@@ -27,7 +27,7 @@ docker-compose up -d
 データベースを作成
 
 ```
-docker-compose exec db mysql -u root
+docker-compose exec db mysql -u root -p
 Enter password:password
 
 mysql> CREATE SCHEMA IF NOT EXISTS `picshare` DEFAULT CHARACTER SET utf8mb4;
@@ -36,7 +36,7 @@ mysql> CREATE SCHEMA IF NOT EXISTS `picshare` DEFAULT CHARACTER SET utf8mb4;
 ユーザを作成
 
 ```
-docker-compose exec db mysql -u root
+docker-compose exec db mysql -u root -p
 Enter password:password
 
 mysql> CREATE USER 'picshare'@'%' IDENTIFIED BY 'password';
